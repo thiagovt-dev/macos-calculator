@@ -1,0 +1,116 @@
+:root {
+    --color-shadow: rgba(0, 0, 0, 0.16);
+    --color-btn-number: #78797aa9;
+    --color-btn-number-active: #afafaf;
+    --color-btn-property: #5e5e60d3;
+    --color-btn-property-active: #7b797a;
+    --color-btn-operation: #ff9d0be5;
+    --color-btn-operation-active: #c97c02;
+    --color-screen: #504b5265;
+    --color-border-btn: rgba(0, 0, 0, 0.401);
+    --color-border-calculator: rgba(0, 0, 0, 1);
+}
+
+*{
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    color: white;
+}
+
+body {
+    background: linear-gradient(320deg, #eb92be, #ffef78, #63c9b4) ;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ .calculator{
+    border: 1px solid var(--color-border-calculator);
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 5px 5px 12px var(--color-shadow);
+ }
+
+.calc-content{
+    display: grid;
+    justify-items: center;
+
+}
+
+.calc-content .screen{
+    grid-column: span 4;
+    background-color: var(--color-screen);
+    backdrop-filter: blur(10px)brightness(0.7);
+    color: white;
+    border: none;
+    width: 200px;
+    height: 70px;
+    min-width: 100%;
+    /* text-align: right; */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    caret-color: transparent;
+    cursor: default;
+}
+.screen #content{
+    display: flex;
+    font-size: 50px;
+    height: 100%;
+    align-items: center;
+    font-weight: 200;
+    flex-direction: row-reverse;
+}
+
+.calc-content button {
+
+    width: 55px;
+    height: 50px;
+    font-size: 20px;
+    margin:auto;
+    border: 1px solid var(--color-border-btn);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+}
+.calc-content button.number:active{
+    background-color: var(--color-btn-number-active);
+}
+.calc-content button:nth-child(18){
+    border-bottom-left-radius: 10px;
+    grid-column: span 2;
+    width: 100%;
+}
+.calc-content button:nth-child(20){
+    border-bottom-right-radius: 10px;
+}
+.calc-content button.operation{
+    background-color: var(--color-btn-operation);
+    backdrop-filter: blur(10px)brightness(0.7);
+}
+.calc-content button.operation:active{
+    background-color: var(--color-btn-operation-active);
+}
+
+.calc-content button.propety {
+    background-color: var(--color-btn-property);
+    backdrop-filter: blur(10px)brightness(0.7);
+}
+.calc-content button.propety:active {
+    background-color: var(--color-btn-property-active);
+}
+
+.calc-content button.number{
+    background-color: var(--color-btn-number);
+    backdrop-filter: blur(10px)brightness(0.7);
+}
+
