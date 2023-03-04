@@ -17,7 +17,7 @@
     margin:0;
     padding: 0;
     color: white;
-    touch-action: manipulation; /*disables zoom interaction in mobile device with touch screen*/
+    /* touch-action: manipulation; disables zoom interaction in mobile device with touch screen */
 }
 
 body {
