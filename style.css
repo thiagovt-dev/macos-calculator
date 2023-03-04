@@ -16,7 +16,6 @@
     box-sizing: border-box;
     margin:0;
     padding: 0;
-    box-sizing: border-box;
     color: white;
     touch-action: manipulation; /*disables zoom interaction in mobile device with touch screen*/
 }
@@ -27,7 +26,6 @@ body {
 }
 
 .container{
-    max-width: 1200px;
     height: 100vh;
     display: flex;
     justify-content: center;
