@@ -18,8 +18,7 @@
     padding: 0;
     box-sizing: border-box;
     color: white;
-    touch-action: pan-x pan-y; /*disables zoom interaction in mobile device with touch screen*/
-
+    touch-action: manipulation; /*disables zoom interaction in mobile device with touch screen*/
 }
 
 body {
