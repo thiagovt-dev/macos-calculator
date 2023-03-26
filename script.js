@@ -204,4 +204,22 @@ document.addEventListener('keydown', k => {
     const keyEl = keys.querySelector(`button[data-key="${key}"]`);
     keyEl.click();
   }
+   if (key === 'Backspace') { // código da tecla backspace
+      k.preventDefault(); // impede que a tecla backspace execute sua ação padrão (voltar para a página anterior)
+      let text = calculatorScreen.textContent; // obtém o texto atual do elemento com o id "texto"
+      calculatorScreen.textContent = text.slice(0, -1); // remove o último caractere do texto e atualiza o elemento com o novo texto
+      if (calculatorScreen.textContent.length < 1){
+        calculatorScreen.textContent = '0';
+
+      };
+
+  };
 });
+
+// document.addEventListener("keydown", function(event) {
+//   if (event.key === 'Backspace') { // 8 é o código da tecla backspace
+//     event.preventDefault(); // impede que a tecla backspace execute sua ação padrão (voltar para a página anterior)
+//     let text = calculatorScreen.textContent; // obtém o texto atual do elemento com o id "texto"
+//     calculatorScreen.textContent = text.slice(0, -1); // remove o último caractere do texto e atualiza o elemento com o novo texto
+//   }
+// });
