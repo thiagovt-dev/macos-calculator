@@ -26,13 +26,6 @@ function addNumber(number) {
   
 };
 
-// function that controls decimal numbers
-function addDecimal() {
-  if (shouldResetScreen) resetScreen();
-  if (calculatorScreen.textContent === "") calculatorScreen.textContent = "0";
-  if (calculatorScreen.textContent.includes(".")) return;
-  calculatorScreen.textContent += ".";
-};
 
 // This function reset the screen
 function resetScreen() {
@@ -216,10 +209,4 @@ document.addEventListener('keydown', k => {
   };
 });
 
-// document.addEventListener("keydown", function(event) {
-//   if (event.key === 'Backspace') { // 8 é o código da tecla backspace
-//     event.preventDefault(); // impede que a tecla backspace execute sua ação padrão (voltar para a página anterior)
-//     let text = calculatorScreen.textContent; // obtém o texto atual do elemento com o id "texto"
-//     calculatorScreen.textContent = text.slice(0, -1); // remove o último caractere do texto e atualiza o elemento com o novo texto
-//   }
-// });
+
